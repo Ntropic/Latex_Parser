@@ -1,0 +1,35 @@
+\input{header}
+
+\begin{document}
+%Title of paper
+\title{A test Page, to show the function of the python parser}
+
+\author{Michael Schilling}
+\affiliation{Humboldt Universität zu Berlin}
+
+\date{\today}
+
+\begin{abstract}
+\lipsum
+\end{abstract}
+
+\maketitle
+
+Look at these quantum circuits, that were added via the external command defined in the header, separately compiled into a pdf, reducing the compile time in consecutive compilations. The circuits are only compiled again, if the .tex file referenced in the external command changed after the last compilation (determined via the last time the files have been modified).  The compilation of external files is parallelized, but LaTeX can be very memory hungry and parallelization can lead to many Cache misses, so don't expect the parallelization to increase compile times too much. 
+\begin{figure}[htb] 
+\centering
+\begin{minipage}{0.48\textwidth}
+  \centering
+  %\scalebox{0.8}{
+  \external{Files}{C_XX_YY_gate}%}
+  \subcaption{\label{fig:cxx_yy}}
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+  \centering
+  %\scalebox{0.8}{
+  \external{Files}{C_XX_YY_gate2}%}
+  \subcaption{\label{fig:cxx_yy2}}
+\end{minipage}
+\caption{Circuit diagrams of the controlled gate of the Pauli XX$\pm$YY rotation ($C_1e^{-i\frac{\phi}{2}(xx \pm yy)}_{3;1,2}$) both for the positive (\subref{fig:cxx_yy}) and the negative sign (\subref{fig:cxx_yy2}).}
+\end{figure}
+\end{document}

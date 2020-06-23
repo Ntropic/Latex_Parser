@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+\node[text width=9cm] at (0,0) {\[\Qcircuit @C=.7em @R=.4em @!R {
+\lstick{\ket{\phi}_{3}} & \ctrl{1} & \qw &  &  & \ctrl{1} & \ctrl{1} & \qw \\ 
+ \lstick{\ket{\phi}_{2}} & \multigate{1}{e^{-i\frac{\phi}{2}(x x-y y)}} & \rstick{\raisebox{-0.5em}{=}} \qw &  &  & \multigate{1}{e^{-i\frac{\phi}{2}x x}} & \multigate{1}{e^{i\frac{\phi}{2}y y}} & \qw \\ 
+ \lstick{\ket{\phi}_{1}} & \ghost{e^{-i\frac{\phi}{2}(x x-y y)}} & \qw &  &  & \ghost{e^{-i\frac{\phi}{2}x x}} & \ghost{e^{i\frac{\phi}{2}y y}} & \qw  
+}\]};
+\end{tikzpicture}

@@ -1,0 +1,43 @@
+\RequirePackage{luatex85}
+\documentclass[aps,prl,groupedaddress,amsmath,amssymb]{revtex4-2}
+
+
+%============================================================
+% Pakets
+%============================================================
+\usepackage[all]{xy}
+\usepackage[braket, qm]{qcircuit} 
+
+\usepackage{tikz}
+\usepackage{pgfplots} 
+\usepgfplotslibrary{patchplots,colormaps}
+\usetikzlibrary{decorations.markings,decorations.pathreplacing,arrows,arrows.meta,calc,patterns,angles,quotes,shapes.geometric,plotmarks,matrix,positioning,backgrounds,fit}
+\pgfplotsset{compat=newest}
+
+%%Minimal_Setup
+%============================================================
+% Pakets that are not necessary for the imported graphics
+%============================================================
+
+\usepackage[english]{babel}
+
+\usepackage[margin=10mm,format=plain,indention=0mm,labelfont=bf]{caption}
+\usepackage{framed}
+\usepackage{lipsum}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Code-Listings
+\usepackage{nicefrac}
+\usepackage{braket}
+\usepackage{rotating, graphicx}
+
+%============================================================
+% Necessary for latex_parse to import the files separately
+%============================================================
+
+\newcommand{\external}[2]{%
+    \edef\x{#1/#2.pdf}
+    \includegraphics{\x}
+}
