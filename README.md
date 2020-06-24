@@ -1,5 +1,5 @@
 # Latex_Parser
-## Parses and compiles Latex documents, and comiles external files separaetly and in parallel. 
+## Parses and compiles Latex documents, and comiles external files separately and in parallel. 
 
 ### Function: 
 Similarly to *tikzexternalize* you can include files via the command *\external{directoryname}{filename without '.tex'}*, which are compiled separately by the **latex_parser** and then included as pdf's in the document. 
